@@ -54,7 +54,7 @@ if not database:get(Server_DarK.."UserName_DarK") then
 print("\27[1;34m\n»» Send Your UserName Sudo : \27[m")
 local UserName = io.read():gsub('@','')
 if UserName ~= '' then
-local Get_Info = http.request("http://tshake.ml/info/?user="..UserName)
+local Get_Info = http.request("http://DarK.ml/info/?user="..UserName)
 if Get_Info:match('Is_Spam') then
 io.write('\n\27[1;31m»» Sorry The server is Spsm \nتم حظر السيرفر لمدة 5 دقايق بسبب التكرار\n\27[0;39;49m')
 return false
@@ -84,7 +84,7 @@ local RunDarK = io.open("DarK", 'w')
 RunDarK:write([[
 #!/usr/bin/env bash
 cd $HOME/DarK
-token="]]..database:get(Server_Tshake.."Token_Tshake")..[["
+token="]]..database:get(Server_DarK.."Token_DarK")..[["
 rm -fr DarK.lua
 wget "https://raw.githubusercontent.com/DarKxTeaM/DarK/master/DarK.lua"
 while(true) do
